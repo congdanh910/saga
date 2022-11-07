@@ -1,0 +1,30 @@
+server.port: 8090
+
+spring.application.name: orders-service-bus
+
+spring.kafka.bootstrap-servers: 127.0.0.1:9092
+
+
+#####################################
+# Topics Configuration
+#####################################
+com.sg.ws.saga.topic.orders-service-topic: orders-service
+com.sg.ws.saga.topic.orders-service-bus-topic: orders-service-bus
+com.sg.ws.saga.topic.payments-service-topic: payments-service
+com.sg.ws.saga.topic.stocks-service-topic: stocks-service
+
+
+#####################################
+# LOG Configuration
+#####################################
+
+# debug: true
+#
+logging.level.org.springframework.boot.autoconfigure: ERROR
+logging.level.org.springframework.web: ERROR
+logging.level.org.hibernate: ERROR
+logging.file.path: "./logs/"
+logging.file.name: orders_service.log
+
+logging.level.com.sg.ws.saga: DEBUG
+

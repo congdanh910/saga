@@ -1,0 +1,148 @@
+2022-10-31 18:12:54.912  INFO 6316 --- [restartedMain] c.s.w.k.stocksservice.StocksServiceApp   : Starting StocksServiceApp using Java 15.0.2 on DM-BinhMai with PID 6316 (F:\training\java\microservices\kafka\stocks-service\target\classes started by binh.mai in F:\training\java\microservices\kafka\stocks-service)
+2022-10-31 18:12:54.913 DEBUG 6316 --- [restartedMain] c.s.w.k.stocksservice.StocksServiceApp   : Running with Spring Boot v2.7.3, Spring v5.3.22
+2022-10-31 18:12:54.916  INFO 6316 --- [restartedMain] c.s.w.k.stocksservice.StocksServiceApp   : No active profile set, falling back to 1 default profile: "default"
+2022-10-31 18:12:56.428  INFO 6316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-10-31 18:12:56.506  INFO 6316 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 1 JPA repository interfaces.
+2022-10-31 18:12:59.238  INFO 6316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8300 (http)
+2022-10-31 18:12:59.245  INFO 6316 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-31 18:12:59.245  INFO 6316 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-10-31 18:12:59.961  INFO 6316 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-31 18:12:59.961  INFO 6316 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5042 ms
+2022-10-31 18:13:00.400  INFO 6316 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-10-31 18:13:00.405  INFO 6316 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-10-31 18:13:00.697  INFO 6316 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 18:13:01.388  INFO 6316 --- [restartedMain] c.s.w.k.s.config.KafkaProducerConfig     : multiTypeProducerFactory - configProps: {value.serializer=class org.springframework.kafka.support.serializer.JsonSerializer, bootstrap.servers=127.0.0.1:9092, key.serializer=class org.apache.kafka.common.serialization.StringSerializer, spring.json.type.mapping=com.sg.ws.saga.common.command.commands.ProductReservedCommand:com.sg.ws.saga.common.command.commands.ProductReservedCommand, com.sg.ws.saga.common.command.commands.RejectOrderCommand:com.sg.ws.saga.common.command.commands.RejectOrderCommand}
+2022-10-31 18:13:01.396  INFO 6316 --- [restartedMain] c.s.w.k.s.config.KafkaConsumerConfig     : multiTypeConsumerFactory - props: {key.deserializer=class org.apache.kafka.common.serialization.StringDeserializer, value.deserializer=class org.springframework.kafka.support.serializer.JsonDeserializer, bootstrap.servers=127.0.0.1:9092}
+2022-10-31 18:13:01.646  WARN 6316 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-10-31 18:13:01.695  INFO 6316 --- [restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-stocksServiceGroup-2
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = stocksServiceGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-10-31 18:13:01.714  INFO 6316 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-10-31 18:13:01.716  INFO 6316 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-10-31 18:13:01.717  INFO 6316 --- [restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1667214781714
+2022-10-31 18:13:01.718  INFO 6316 --- [restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Subscribed to topic(s): stocks-service
+2022-10-31 18:13:01.728  INFO 6316 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8300 (http) with context path ''
+2022-10-31 18:13:01.731  INFO 6316 --- [restartedMain] c.s.w.k.stocksservice.StocksServiceApp   : Started StocksServiceApp in 7.009 seconds (JVM running for 847.264)
+2022-10-31 18:13:01.733  INFO 6316 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-10-31 18:13:01.743  INFO 6316 --- [stocksServiceGroup-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Resetting the last seen epoch of partition stocks-service-0 to 0 since the associated topicId changed from null to ERjY_An5Q5yCvhoLtVuytQ
+2022-10-31 18:13:01.744  INFO 6316 --- [stocksServiceGroup-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Cluster ID: zHtjuascQI2WYX4oIqGnmQ
+2022-10-31 18:13:01.744  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Discovered group coordinator host.docker.internal:9092 (id: 2147483647 rack: null)
+2022-10-31 18:13:01.746  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] (Re-)joining group
+2022-10-31 18:13:01.757  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Request joining group due to: need to re-join with the given member-id
+2022-10-31 18:13:01.758  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] (Re-)joining group
+2022-10-31 18:13:01.792  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Successfully joined group with generation Generation{generationId=82, memberId='consumer-stocksServiceGroup-2-7cacb0d1-dc78-4574-9e86-32a50a59d5ef', protocol='range'}
+2022-10-31 18:13:01.792  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Finished assignment for group at generation 82: {consumer-stocksServiceGroup-2-7cacb0d1-dc78-4574-9e86-32a50a59d5ef=Assignment(partitions=[stocks-service-0])}
+2022-10-31 18:13:01.796  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Successfully synced group in generation Generation{generationId=82, memberId='consumer-stocksServiceGroup-2-7cacb0d1-dc78-4574-9e86-32a50a59d5ef', protocol='range'}
+2022-10-31 18:13:01.796  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Notifying assignor about the new Assignment(partitions=[stocks-service-0])
+2022-10-31 18:13:01.796  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Adding newly assigned partitions: stocks-service-0
+2022-10-31 18:13:01.800  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Setting offset for partition stocks-service-0 to the committed offset FetchPosition{offset=25, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[host.docker.internal:9092 (id: 0 rack: null)], epoch=0}}
+2022-10-31 18:13:01.801  INFO 6316 --- [stocksServiceGroup-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stocksServiceGroup: partitions assigned: [stocks-service-0]
+2022-10-31 18:13:03.550  INFO 6316 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2022-10-31 18:13:03.604  INFO 6316 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-10-31 18:13:03.608  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Revoke previously assigned partitions stocks-service-0
+2022-10-31 18:13:03.609  INFO 6316 --- [stocksServiceGroup-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stocksServiceGroup: partitions revoked: [stocks-service-0]
+2022-10-31 18:13:03.609  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Member consumer-stocksServiceGroup-2-7cacb0d1-dc78-4574-9e86-32a50a59d5ef sending LeaveGroup request to coordinator host.docker.internal:9092 (id: 2147483647 rack: null) due to the consumer unsubscribed from all topics
+2022-10-31 18:13:03.609  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Resetting generation due to: consumer pro-actively leaving the group
+2022-10-31 18:13:03.609  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Request joining group due to: consumer pro-actively leaving the group
+2022-10-31 18:13:03.610  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Unsubscribed all topics or patterns and assigned partitions
+2022-10-31 18:13:03.610  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Resetting generation due to: consumer pro-actively leaving the group
+2022-10-31 18:13:03.611  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-stocksServiceGroup-2, groupId=stocksServiceGroup] Request joining group due to: consumer pro-actively leaving the group
+2022-10-31 18:13:03.631  INFO 6316 --- [stocksServiceGroup-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-10-31 18:13:03.633  INFO 6316 --- [stocksServiceGroup-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-10-31 18:13:03.633  INFO 6316 --- [stocksServiceGroup-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-10-31 18:13:03.634  INFO 6316 --- [stocksServiceGroup-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-stocksServiceGroup-2 unregistered
+2022-10-31 18:13:03.635  INFO 6316 --- [stocksServiceGroup-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : stocksServiceGroup: Consumer stopped
+2022-10-31 18:13:03.642  INFO 6316 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-31 18:13:03.854  WARN 6316 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-214]
+2022-10-31 18:13:03.855  INFO 6316 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-10-31 18:13:03.857  INFO 6316 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.

@@ -1,0 +1,52 @@
+server.port: 8200
+
+spring.application.name: payments-service
+
+spring.kafka.bootstrap-servers: 127.0.0.1:9092
+
+
+#####################################
+# Topics Configuration
+#####################################
+com.sg.ws.saga.topic.orders-service-topic: orders-service
+com.sg.ws.saga.topic.orders-service-bus-topic: orders-service-bus
+com.sg.ws.saga.topic.payments-service-topic: payments-service
+com.sg.ws.saga.topic.stocks-service-topic: stocks-service
+
+
+#####################################
+# LOG Configuration
+#####################################
+
+# debug: true
+#
+logging.level.org.springframework.boot.autoconfigure: ERROR
+logging.level.org.springframework.web: ERROR
+logging.level.org.hibernate: ERROR
+logging.file.path: "./logs/"
+logging.file.name: payments_service.log
+
+logging.level.com.sg.ws.saga: DEBUG
+
+
+#####################################
+# H2 Configuration
+#####################################
+# spring.jpa.show-sql: false
+spring.datasource.url: jdbc:h2:mem:payments-dev;DB_CLOSE_ON_EXIT=FALSE
+spring.datasource.username: root
+spring.datasource.password: root
+spring.datasource.driver-class-name: org.h2.Driver
+spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto: update
+spring.h2.console.enabled: true
+spring.jpa.defer-datasource-initialization: true
+# spring.h2.console.settings.web-allow-others: true
+
+
+#  Spring Boot >=v2.5.0
+spring.sql.init.platform: h2
+spring.sql.init.mode: always
+# Spring Boot <v2.5.0
+# spring.datasource.initialization-mode=always
+# spring.datasource.platform=h2
